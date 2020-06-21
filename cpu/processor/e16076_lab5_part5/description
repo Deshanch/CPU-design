@@ -1,0 +1,24 @@
+  *** assigned opcodes:-
+
+                    opcode for bne(branch not equal)          = "00001010"
+	            opcode for sll(logical shift left)        = "00001011"
+	            opcode for srl(logical shift right)       = "00001100"
+	            opcode for sra(arithmetic shift right)    = "00001101"
+	            opcode for ror(rotate right)              = "00001110"
+
+  *** New latencies:- 
+
+                    for every shift added a latency of #1 always. Not for default cases.As no adder is in the new implementation,for shifting, get #1.
+
+  *** changes made to the datapath:- 
+
+                    Put a shift unit parallel to alu.Result out by the shift unit and result out by the alu is sent to a mux named "mux_shift" and from the 'shift' signal out by the control unit 
+                    what has to be sent to the register file is decided.
+
+  *** changes made to the control unit:- 
+
+                    Had to add new controls named "SHIFT_SEL" and "SHIFT".
+                    SHIFT_SEL      --> select which shifting is needed.
+                    SHIFT          --> say to the "mux_shift" that which signal is sent to the register file to write.
+
+                    

@@ -1,0 +1,8 @@
+1.Compile            --> iverilog -o cpu.vvp cpu_tb.v
+
+2.Run                --> vvp cpu.vvp
+
+3.Open with gtk wave --> gtkwave cpu_wavedata.vcd
+
+         
+

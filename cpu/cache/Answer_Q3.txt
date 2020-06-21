@@ -1,0 +1,8 @@
+3. Compare your system’s performance with the cache-less one from part 1, using test
+programs, and write a brief report.
+
+In the lab6 part1, we didnot use a cache, so for 8,12,16,20,40,44 instructions it had to stall the cpu in every occasion.But due to having a cache, only for 8 instruction, have to stall the cache.
+For every other occasions cpu is not stalled.so it increases the hit rate and there by increase the performance of the cpu.Only one miss occasion is in the system and all other are hits.
+As tags are always same no need of writing to memory back(write back).so no stallation is happened.In part1 there were 6 stallations and in part2 there is only one stallation.Even the stallation latency  
+of the part two is higher than that of the part one, due to having one stallation total stallation latency is lesser than that of part1.From the overrall view, it can be stated that overrall performance 
+of the cpu is best in the cache implementation.
